@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include <math.h>
 
+void calculateQuadraticRoots(double coefficientA, double coefficientB, double coefficientC);
+
+int main() {
+  double coefficientA, coefficientB, coefficientC;
+
+  printf("Enter the coefficients A, B, and C: ");
+  scanf("%lf %lf %lf", &coefficientA, &coefficientB, &coefficientC);
+
+  calculateQuadraticRoots(coefficientA, coefficientB, coefficientC);
+
+  return 0;
+}
 void calculateQuadraticRoots(double coefficientA, double coefficientB, double coefficientC) {
   // Check if A and B are both zero
   if (coefficientA == 0 && coefficientB == 0) {
@@ -33,15 +45,4 @@ void calculateQuadraticRoots(double coefficientA, double coefficientB, double co
     // Print the roots
     printf("The roots are: %.2lf, %.2lf\n", root1, root2);
   }
-}
-
-int main() {
-  double coefficientA, coefficientB, coefficientC;
-
-  printf("Enter the coefficients A, B, and C: ");
-  scanf("%lf %lf %lf", &coefficientA, &coefficientB, &coefficientC);
-
-  calculateQuadraticRoots(coefficientA, coefficientB, coefficientC);
-
-  return 0;
 }
